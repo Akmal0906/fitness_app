@@ -7,6 +7,7 @@ import 'package:fitness_app/presentation/view/sign_in_screen.dart';
 import 'package:fitness_app/utils/all_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../domain/textfield_model.dart';
 import '../../utils/constants.dart';
@@ -60,6 +61,36 @@ class _SignUpScreenState extends State<SignUpScreen> {
     ];
   }
 
+  void directFunc() {
+    final nomericRex =
+        RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+    if (password1Controller.text.trim() == password2Controller.text.trim() &&
+        password1Controller.text.length > 8 &&
+        nomericRex.hasMatch(password1Controller.text.trim()) == true &&
+        userNameController.text.isNotEmpty &&
+        lastNameController.text.isNotEmpty) {
+      print('IF WORKING');
+      context.read<RegisterBloc>().add(AddEvent(
+          userModel: UserModel(
+              firstname: userNameController.text.trim(),
+              lastname: lastNameController.text.trim(),
+              phone: numberController.text.trim(),
+              password: password1Controller.text.trim())));
+    } else {
+      print('ELSE WORKING');
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Something went wrong',
+            style: customStyle,
+          ),
+          duration: const Duration(seconds: 3),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -74,8 +105,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               children: [
                 Padding(
-                  padding:
-                  const EdgeInsets.only(left: 54, right: 54, top: 4),
+                  padding: const EdgeInsets.only(left: 54, right: 54, top: 4),
                   child: Image.asset(
                     'assets/images/signup.png',
                     height: 150,
@@ -103,21 +133,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              context.read<RegisterBloc>().add(AddEvent(
-                                  userModel: UserModel(
-                                      firstname:
-                                      userNameController.text.trim(),
-                                      lastname:
-                                      lastNameController.text.trim(),
-                                      phone: numberController.text.trim(),
-                                      password: password1Controller.text
-                                          .trim())));
+                              print('ishlavotti');
+                              directFunc();
                             },
                             child: Container(
                               height: 37,
                               width: size.width,
-                              margin: const EdgeInsets.only(
-                                  left: 24, right: 24),
+                              margin:
+                                  const EdgeInsets.only(left: 24, right: 24),
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),
@@ -127,8 +150,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   ])),
                               child: Text(
                                 'Save'.tr(),
-                                style: customStyle.copyWith(
-                                    color: Colors.white),
+                                style:
+                                    customStyle.copyWith(color: Colors.white),
                               ),
                             ),
                           ),
@@ -150,16 +173,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   ),
                                 );
                               } else if (state is RegisterSuccessState) {
-                                WidgetsBinding.instance.addPostFrameCallback((_) {
+                                WidgetsBinding.instance
+                                    .addPostFrameCallback((_) {
                                   Navigator.of(context).pushAndRemoveUntil(
-                                      MaterialPageRoute(builder: (context) => const MapScreen()),
-                                          (route) => false);
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const MapScreen()),
+                                      (route) => false);
                                 });
                               }
                               return const SizedBox.shrink();
                             },
-                            listener:
-                                (BuildContext context, Object? state) {},
+                            listener: (BuildContext context, Object? state) {},
                           )
                         ],
                       ),
@@ -175,9 +200,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                             TextButton(
                                 onPressed: () {
-                                  Navigator.of(context).push(
-                                      MaterialPageRoute(
-                                          builder: (context) =>
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) =>
                                           const SignInScreen()));
                                 },
                                 child: Text(

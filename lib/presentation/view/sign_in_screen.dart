@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/models/user_model.dart';
 import '../../domain/textfield_model.dart';
 import '../../utils/all_colors.dart';
 import '../../utils/constants.dart';
