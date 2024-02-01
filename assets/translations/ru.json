@@ -1,0 +1,16 @@
+{
+  "Hello bro": "KAK TI BRO",
+  "First Name": "Имя",
+  "Last Name": "Фамилия",
+  "Phone number": "Номер телефона",
+  "Password": "Пароль",
+  "Confirm password": "Подтвердите пароль",
+  "Enter your last name": "Введите свою фамилию",
+  "Enter your first name": "Введите свое имя",
+  "Enter your password": "Введите ваш пароль",
+  "Enter your confirm password": "Введите пароль для подтверждения",
+  "Title": "Заголовок",
+  "Description": "Описание",
+  "Address by location": "Адрес по местоположению",
+  "Change Location":"Изменить местоположение"
+}

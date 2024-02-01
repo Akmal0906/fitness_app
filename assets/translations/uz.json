@@ -1,0 +1,16 @@
+{
+  "Hello bro": "Qaleysiz oka",
+  "First Name": "Ismingiz",
+  "Last Name": "Familyangiz",
+  "Phone number": "Telefon raqam",
+  "Password": "Parol",
+  "Enter your last name": "Familyangizni kiriting",
+  "Enter your first name": "Ismingizni kiriting",
+  "Enter your password": "Parolni kiriting",
+  "Enter your confirm password": "Parolni qayta kiriting",
+  "Title": "Sarlavha",
+  "Description": "qisqacha ta'rif",
+  "Address by location": "Manzil bo'yicha",
+  "Change Location":"Manzilni almashtirish"
+
+}
