@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fitness_app/presentation/view/sign_up_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -103,7 +104,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                       AllColors.linearColor2
                                     ])),
                                 child: Text(
-                                  AllText.signIn,
+                                  'Sign In'.tr(),
                                   style:
                                       customStyle.copyWith(color: Colors.white),
                                 ),
@@ -114,7 +115,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               child: Row(
                                 children: [
                                   Text(
-                                    'do you have an account ?',
+                                    'do you have not an account ?'.tr(),
                                     style: customStyle.copyWith(
                                         color: Colors.grey.shade400,
                                         letterSpacing: 1),
@@ -127,7 +128,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                                     const SignUpScreen()));
                                       },
                                       child: Text(
-                                        'Sign Up',
+                                        'Sign Up'.tr(),
                                         style: customStyle.copyWith(
                                             color: Colors.blueAccent.shade400,
                                             letterSpacing: 0.5,

@@ -54,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: DropdownButton(
                     isExpanded: true,
                     hint: Text(
-                      'Hello bro'.tr(),
+                      'Choose a language',
                       style: customStyle,
                     ),
                     value: valueChoose,

@@ -11,6 +11,11 @@
   "Title": "Title",
   "Description": "Description",
   "Address by location": "Address by location",
-  "Change Location":"Change Location"
+  "Change Location":"Change Location",
+  "do you have an account ?": "do you have an account ?",
+  "Sign In": "Sign In",
+  "do you have not an account ?": "do you have not an account ?",
+  "Sign Up": "Sign Up",
+  "Save": "Save"
 
 }

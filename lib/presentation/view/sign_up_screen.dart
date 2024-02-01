@@ -1,4 +1,5 @@
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fitness_app/domain/models/user_model.dart';
 import 'package:fitness_app/presentation/blocs/register_bloc.dart';
 import 'package:fitness_app/presentation/view/map_screen.dart';
@@ -126,7 +127,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       AllColors.linearColor2
                                     ])),
                                 child: Text(
-                                  AllText.save,
+                                  'Save'.tr(),
                                   style: customStyle.copyWith(color: Colors.white),
                                 ),
                               ),
@@ -136,7 +137,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               child: Row(
                                 children: [
                                   Text(
-                                    'do you have an account ?',
+                                    'do you have an account ?'.tr(),
                                     style:
                                     customStyle.copyWith(color: Colors.grey.shade400,letterSpacing: 1),
                                   ),
@@ -146,7 +147,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                             builder: (context) => const SignInScreen()));
                                       },
                                       child: Text(
-                                        'Sign In',
+                                        'Sign In'.tr(),
                                         style: customStyle.copyWith(
                                             color: Colors.blueAccent.shade400,letterSpacing: 0.5,fontSize: 16),
                                       )),

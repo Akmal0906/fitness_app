@@ -11,6 +11,12 @@
   "Title": "Sarlavha",
   "Description": "qisqacha ta'rif",
   "Address by location": "Manzil bo'yicha",
-  "Change Location":"Manzilni almashtirish"
+  "Change Location":"Manzilni almashtirish",
+  "do you have an account ?": "hisobingiz bormi?",
+  "Sign In": "Tizimga kirish",
+  "do you have not an account ?": "hisobingiz yo'qmi?",
+  "Sign Up": "Ro'yxatdan o'tish",
+  "Save": "Saqlash"
+
 
 }

@@ -12,5 +12,10 @@
   "Title": "Заголовок",
   "Description": "Описание",
   "Address by location": "Адрес по местоположению",
-  "Change Location":"Изменить местоположение"
+  "Change Location":"Изменить местоположение",
+  "do you have an account ?": "У тебя есть аккаунт ?",
+  "Sign In": "Войти",
+  "do you have not an account ?": "у тебя нет аккаунта?",
+  "Sign Up": "Зарегистрироваться",
+  "Save": "Сохранять"
 }
